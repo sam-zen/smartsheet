@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon index"
+    "start": "nodemon index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "mongoose": "^5.8.6"
+    "isomorphic-unfetch": "^3.0.0",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^5.8.9"
   }
 }

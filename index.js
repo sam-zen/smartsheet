@@ -20,7 +20,7 @@ const app = express();
 app.use( express.json() );
 app.use( routes.routes );
 
-const port = 3000;
+const port = 3500;
 app.set('port', port)
 app.set('host', '127.0.0.1');
-app.listen(port, app.get('host'), `Application started on port ${port} `);
+app.listen(port, app.get('host'), () => console.log(`Application started on port ${port} `) );

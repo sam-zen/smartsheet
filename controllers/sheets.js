@@ -1,9 +1,23 @@
+// Using axios
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const {sheetsModel} = require('../models/')
+const fs = require('fs');
+// const file = require('../k.esp');
 
-const API_KEY = process.env.SMARTSHEET_API_KEY;
+
+// const API_KEY = process.env.SMARTSHEET_API_KEY;
+const API_KEY = fs.readFileSync( './k.txt', (err, data) => {
+    if (err){
+        console.log(`API KEY error ${err} `)
+        // process.exit();
+        return err;
+    }
+    return data.toString();
+    // console.log( data.values() );
+});
+console.log(`API_KEY : ${API_KEY} `)
 router.use(express.json());
 
 const smartsheetAPiEndpoint = 'https://api.smartsheet.com/2.0/sheets';
